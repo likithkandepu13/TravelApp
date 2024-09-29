@@ -1,0 +1,81 @@
+/* Style for the navbar container */
+.navbar {
+  background: linear-gradient(135deg, #6e8efb, #a777e3); /* Gradient background */
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  position: sticky;
+  top: 0; /* Sticky on top */
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Montserrat', sans-serif; /* Replace with your chosen font */
+  font-size: 24px; /* Adjust size as needed */
+  font-weight: bold;
+  color: white;
+  margin-left: 0;
+  display: flex;
+}
+
+/* Style for the unordered list in the navbar */
+.navbar-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px; /* Space between items */
+}
+
+/* Style for each list item */
+.navbar-item {
+  margin: 0;
+}
+
+/* Style for the links */
+.navbar-link {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+  display: inline-block;
+}
+
+/* Hover effect for the links */
+.navbar-link:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Light overlay on hover */
+  color: #ffffff;
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Style for the expand section */
+.expand {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  max-height: 0; /* Initially collapsed */
+}
+
+/* When expanded, show the content */
+.expand.expanded {
+  max-height: 300px; /* Adjust based on content size */
+}
+
+/* Media Query for mobile responsiveness */
+@media (max-width: 768px) {
+  .navbar-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar-link {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+}
